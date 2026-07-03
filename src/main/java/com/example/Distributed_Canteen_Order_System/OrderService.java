@@ -22,6 +22,8 @@ public class OrderService {
     .min(Comparator.comparingInt(c -> orderRepo.countByCanteen(c)))
     .orElseThrow(() -> new RuntimeException("No canteen available"));
 
+    System.out.println("Selected canteen:" + selected.getName());
+
 
         order.setCanteen(selected);
         return orderRepo.save(order);
