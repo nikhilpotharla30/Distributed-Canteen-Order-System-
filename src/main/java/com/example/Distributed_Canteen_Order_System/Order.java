@@ -2,6 +2,7 @@ package com.example.Distributed_Canteen_Order_System;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -17,4 +18,10 @@ public class Order {
     private Canteen canteen;
 
     private String order_details;
+
+    // Added field for order date
+    private LocalDateTime orderDate;
+
+    // Added field for order status
+    private String status;
 }
